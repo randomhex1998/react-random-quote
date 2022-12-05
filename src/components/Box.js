@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { BASE_URL } from "./BaseUrl";
+import { BASE_URL } from "../shared/BaseUrl";
+import Button from "../shared/Btn";
 
 const Box = () => {
   const [qoute, setQuote] = useState("");
@@ -28,10 +29,8 @@ const Box = () => {
         <h4 className="author-box">{author}</h4>
       </div>
       <div className="btn-area">
-        <button className="btn gen-btn" onClick={apiHandler}>
-          Generate
-        </button>
-        <button className="btn copy-btn">Copy</button>
+        <Button content="Generate" cls="btn gen-btn" clkFunc="apiHandler" />
+        <Button content="Copy" cls="btn copy-btn" />
       </div>
     </div>
   );
