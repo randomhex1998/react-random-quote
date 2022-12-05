@@ -4,14 +4,16 @@ import { BASE_URL } from "./BaseUrl";
 
 const Box = () => {
 
-//   const nn = () => {};
+    const [qoute , setQuote] = useState("");
+    const [author , setAuthor] = useState("");
 
   const apiHandler = () => {
     axios.get(BASE_URL).then((res) => {
       let mainQuotesAdd = res.data.quotes;
       let rndNum = Math.floor(Math.random() * mainQuotesAdd.length);
       let showQuote = mainQuotesAdd[rndNum];
-      console.log(showQuote.author);
+      setQuote(showQuote.quote);
+      setAuthor(showQuote.author);
     });
   };
 
