@@ -1,6 +1,5 @@
-const Button = ({cls , content , clkFunc}) => {
-    <button className={cls} onClick={clkFunc}>{content}</button>
+export const Btn = ({cls , content , clkFunc}) => {
+    return(
+        <button type="button" className={cls} onClick={clkFunc}>{content}</button>
+    )
 }
-
-
-export default Button;
