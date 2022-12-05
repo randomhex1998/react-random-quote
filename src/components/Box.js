@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "./BaseUrl";
 
 const Box = () => {
+
+//   const nn = () => {};
+
+  const apiHandler = () => {
+    axios.get(BASE_URL).then((res) => {
+      let mainQuotesAdd = res.data.quotes;
+      let rndNum = Math.floor(Math.random() * mainQuotesAdd.length);
+      let showQuote = mainQuotesAdd[rndNum];
+      console.log(showQuote.author);
+    });
+  };
+
   return (
     <div className="main-box">
       <h2>The King is Back</h2>
@@ -17,7 +31,9 @@ const Box = () => {
         <h4 className="author-box">Rayan Jaberi</h4>
       </div>
       <div className="btn-area">
-        <button className="btn gen-btn">Generate</button>
+        <button className="btn gen-btn" onClick={apiHandler}>
+          Generate
+        </button>
         <button className="btn copy-btn">Copy</button>
       </div>
     </div>
