@@ -1,8 +1,11 @@
-import Box from './components/Box';
+import "./scss/index.scss";
+import Box from "./components/Box";
 
 function App() {
   return (
-    <Box/>
+    <div className="container">
+      <Box />
+    </div>
   );
 }
 

@@ -16,11 +16,9 @@ const Box = () => {
         </p>
         <h4 className="author-box">Rayan Jaberi</h4>
       </div>
-      <div className="footer-box">
-        <div className="btn-area">
-          <button className="gen-btn">Generate</button>
-          <button className="copy-btn">Copy</button>
-        </div>
+      <div className="btn-area">
+        <button className="btn gen-btn">Generate</button>
+        <button className="btn copy-btn">Copy</button>
       </div>
     </div>
   );
