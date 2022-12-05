@@ -23,7 +23,7 @@ const Box = () => {
 
   return (
     <div className="main-box">
-      <h2>The King is Back</h2>
+      <h2>Generate Quotes</h2>
       <div className="Content-box">
         <p className="text-box">{qoute}</p>
         <h4 className="author-box">{author}</h4>
